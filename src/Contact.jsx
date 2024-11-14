@@ -23,13 +23,13 @@ function Contact() {
 
     return (
         <section
-            className="relative flex items-center justify-center min-h-screen bg-cover bg-center"
+            className="relative flex items-center justify-center min-h-screen bg-cover bg-center px-4 sm:px-8"
             style={{
                 backgroundImage: `url('./assets/contactUs.jpg')`,
             }}
         >
             {/* Overlay for opacity effect */}
-            <div className="absolute inset-0"></div>
+            <div className="absolute inset-0 bg-black opacity-50"></div>
 
             {/* Form Container */}
             <div className="relative z-10 w-full max-w-lg p-8 bg-white rounded-lg shadow-lg">

@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="footer-section contact">
           <h4>Contact Us</h4>
           <p>Email: <a href="mailto:support@explorebudget.com">support@explorebudget.com</a></p>
-          <p>Phone: <a href="tel:+123456789">+123 456 789</a></p>
+          <p>Phone: <a href="tel:8233198895">+</a></p>
         </div>
 
         <div className="footer-section social-media">

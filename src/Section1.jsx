@@ -51,12 +51,12 @@ const Section1 = () => {
   }, []);
 
   return (
-    <div>
-      <section className="flex-row justify-center">
+    <div className="p-4">
+      <section className="flex flex-col items-center justify-center text-center">
         {/* Heading with GSAP animation */}
         <h1
           ref={headingRef}
-          className="text-7xl font-extrabold text-center mt-12 m-4 mb-4 hover:text-8xl hover:text-orange-700 transition-all"
+          className="text-4xl sm:text-5xl md:text-7xl font-extrabold mt-8 m-2 hover:text-6xl md:hover:text-8xl hover:text-orange-700 transition-all"
         >
           TRAVEL SAVVY IS HERE!
         </h1>
@@ -64,7 +64,7 @@ const Section1 = () => {
         {/* Tagline with GSAP animation */}
         <p
           ref={taglineRef}
-          className="text-2xl text-center text-gray-400 mb-12"
+          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8"
         >
           Discover, Explore, and Experience
         </p>
@@ -72,40 +72,40 @@ const Section1 = () => {
         {/* Banner Image with GSAP animation */}
         <img
           ref={bannerImageRef}
-          className="h-96 w-full"
+          className="w-full h-60 sm:h-80 md:h-96 object-cover"
           src={banner1}
           alt="Travel Banner"
         />
       </section>
 
       {/* Transport Images Section */}
-      <section className="flex justify-center items-center space-x-8 mt-12">
+      <section className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8 mt-8">
         <div className="text-center">
           <img
             ref={(el) => (transportImagesRef.current[0] = el)}
-            className="h-40 w-40 rounded-lg shadow-lg"
+            className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 rounded-lg shadow-lg"
             src={airTransport}
             alt="Air Transport"
           />
-          <p className="text-lg mt-2">Air</p>
+          <p className="text-md sm:text-lg mt-2">Air</p>
         </div>
         <div className="text-center">
           <img
             ref={(el) => (transportImagesRef.current[1] = el)}
-            className="h-40 w-40 rounded-lg shadow-lg"
+            className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 rounded-lg shadow-lg"
             src={railTransport}
             alt="Rail Transport"
           />
-          <p className="text-lg mt-2">Rail</p>
+          <p className="text-md sm:text-lg mt-2">Rail</p>
         </div>
         <div className="text-center">
           <img
             ref={(el) => (transportImagesRef.current[2] = el)}
-            className="h-40 w-40 rounded-lg shadow-lg"
+            className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 rounded-lg shadow-lg"
             src={roadTransport}
             alt="Road Transport"
           />
-          <p className="text-lg mt-2">Road</p>
+          <p className="text-md sm:text-lg mt-2">Road</p>
         </div>
       </section>
     </div>
