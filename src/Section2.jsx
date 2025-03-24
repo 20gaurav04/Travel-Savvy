@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Section2 = () => {
   const [selectedMode, setSelectedMode] = useState(null);
+  const [selectedBudget, setSelectedBudget] = useState(null); // State for budget category
 
   const handleModeClick = (mode) => {
     setSelectedMode(mode);
+  };
+
+  const handleBudgetClick = (budget) => {
+    setSelectedBudget(budget);
   };
 
   return (
@@ -43,12 +48,10 @@ const Section2 = () => {
       <div className="flex flex-wrap gap-4 mb-4">
         <input
           type="date"
-          placeholder="Departure Date"
           className="w-full sm:flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600"
         />
         <input
           type="date"
-          placeholder="Return Date"
           className="w-full sm:flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600"
         />
       </div>
@@ -57,13 +60,11 @@ const Section2 = () => {
       <div className="flex flex-col sm:flex-row items-center justify-between mb-4">
         <span className="text-gray-600">Modes of Transport:</span>
         <div className="flex flex-wrap gap-2 mt-2 sm:mt-0">
-          {['Road', 'Air', 'Rail'].map((mode) => (
+          {["Road", "Air", "Rail"].map((mode) => (
             <button
               key={mode}
               className={`px-3 py-1 text-sm rounded-full border ${
-                selectedMode === mode
-                  ? 'bg-orange-400 text-white'
-                  : 'border-gray-300 text-gray-700'
+                selectedMode === mode ? "bg-orange-400 text-white" : "border-gray-300 text-gray-700"
               }`}
               onClick={() => handleModeClick(mode)}
             >
@@ -73,13 +74,21 @@ const Section2 = () => {
         </div>
       </div>
 
-      {/* Budget Category */}
+      {/* Budget Category with Active State */}
       <div className="flex flex-col sm:flex-row items-center justify-between mb-4">
         <span className="text-gray-600">Budget Category:</span>
         <div className="flex flex-wrap gap-2 mt-2 sm:mt-0">
-          <button className="px-3 py-1 text-sm rounded-full border border-gray-300">Economy</button>
-          <button className="px-3 py-1 text-sm rounded-full border border-gray-300">Standard</button>
-          <button className="px-3 py-1 text-sm rounded-full border border-gray-300">Luxury</button>
+          {["Economy", "Standard", "Luxury"].map((budget) => (
+            <button
+              key={budget}
+              className={`px-3 py-1 text-sm rounded-full border ${
+                selectedBudget === budget ? "bg-orange-400 text-white" : "border-gray-300 text-gray-700"
+              }`}
+              onClick={() => handleBudgetClick(budget)}
+            >
+              {budget}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -123,4 +132,3 @@ const Section2 = () => {
 };
 
 export default Section2;
-  
