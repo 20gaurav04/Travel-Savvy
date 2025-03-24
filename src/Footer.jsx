@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css'; // Don't forget to create and style Footer.css
+import './Footer.css';
 
 const Footer = () => {
   return (
@@ -23,17 +23,17 @@ const Footer = () => {
 
         <div className="footer-section contact">
           <h4>Contact Us</h4>
-          <p>Email: <a href="mailto:support@explorebudget.com">support@explorebudget.com</a></p>
+          <p>Email: <a href="mailto:gauravs12009@gmail.com">gauravs12009@gmail.com</a></p>
           <p>Phone: <a href="tel:8233198895">+</a></p>
         </div>
 
         <div className="footer-section social-media">
           <h4>Follow Us</h4>
           <ul>
-            <li><a href="https://www.facebook.com/explorebudget" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://www.instagram.com/explorebudget" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://twitter.com/explorebudget" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-            <li><a href="https://www.pinterest.com/explorebudget" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.instagram.com/ig_myto" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://twitter.com/MytoUniver53936" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://in.pinterest.com/btechug2026/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
           </ul>
         </div>
       </div>
