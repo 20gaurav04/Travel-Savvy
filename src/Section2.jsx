@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 
-<<<<<<< HEAD
 import airTransport from "./assets/air.jpg";
 import railTransport from "./assets/rail.jpg";
 import roadTransport from "./assets/road.jpg";
-=======
-const Section2 = () => {
-  const [selectedMode, setSelectedMode] = useState(null);
-  const [selectedBudget, setSelectedBudget] = useState(null); // State for budget category
->>>>>>> 98f0a53ad2e8131bb6a781291b89fff7eefdaffb
 
 const ModesOfTransport = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -62,10 +56,6 @@ const ModesOfTransport = () => {
     }
   };
 
-  const handleBudgetClick = (budget) => {
-    setSelectedBudget(budget);
-  };
-
   return (
     <div id="bookings" className="flex flex-col items-center justify-center min-h-screen bg-orange-50 p-6">
       <h1 className="text-3xl font-bold mb-8 text-orange-600">Modes of Transport</h1>
@@ -92,7 +82,6 @@ const ModesOfTransport = () => {
           <p className="text-center mt-2 font-medium text-orange-700">Rail</p>
         </div>
 
-<<<<<<< HEAD
         <div
           onClick={() => handleTransportSelect("Road")}
           className={`cursor-pointer transform hover:scale-105 transition duration-300 rounded-lg overflow-hidden shadow ${
@@ -114,55 +103,6 @@ const ModesOfTransport = () => {
         >
           Budget Category
         </button>
-=======
-      {/* Date Inputs */}
-      <div className="flex flex-wrap gap-4 mb-4">
-        <input
-          type="date"
-          className="w-full sm:flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600"
-        />
-        <input
-          type="date"
-          className="w-full sm:flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600"
-        />
-      </div>
-
-      {/* Modes of Transport with Active State */}
-      <div className="flex flex-col sm:flex-row items-center justify-between mb-4">
-        <span className="text-gray-600">Modes of Transport:</span>
-        <div className="flex flex-wrap gap-2 mt-2 sm:mt-0">
-          {["Road", "Air", "Rail"].map((mode) => (
-            <button
-              key={mode}
-              className={`px-3 py-1 text-sm rounded-full border ${
-                selectedMode === mode ? "bg-orange-400 text-white" : "border-gray-300 text-gray-700"
-              }`}
-              onClick={() => handleModeClick(mode)}
-            >
-              {mode}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Budget Category with Active State */}
-      <div className="flex flex-col sm:flex-row items-center justify-between mb-4">
-        <span className="text-gray-600">Budget Category:</span>
-        <div className="flex flex-wrap gap-2 mt-2 sm:mt-0">
-          {["Economy", "Standard", "Luxury"].map((budget) => (
-            <button
-              key={budget}
-              className={`px-3 py-1 text-sm rounded-full border ${
-                selectedBudget === budget ? "bg-orange-400 text-white" : "border-gray-300 text-gray-700"
-              }`}
-              onClick={() => handleBudgetClick(budget)}
-            >
-              {budget}
-            </button>
-          ))}
-        </div>
-      </div>
->>>>>>> 98f0a53ad2e8131bb6a781291b89fff7eefdaffb
 
         <button
           onClick={() => handleCategorySelect("Special")}
@@ -199,8 +139,4 @@ const ModesOfTransport = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ModesOfTransport;
-=======
-export default Section2;
->>>>>>> 98f0a53ad2e8131bb6a781291b89fff7eefdaffb
