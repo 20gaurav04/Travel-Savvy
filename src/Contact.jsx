@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser'; // <-- Make sure this is imported!
 
 function Contact() {
     const form = useRef();
@@ -13,10 +13,13 @@ function Contact() {
             })
             .then(
                 (result) => {
-                    console.log('SUCCESS!', result);
+                    console.log('SUCCESS!', result.text);
+                    alert('Message sent successfully!');
+                    form.current.reset();
                 },
                 (error) => {
-                    console.log('FAILED...', error);
+                    console.log('FAILED...', error.text);
+                    alert('Failed to send message. Please try again.');
                 }
             );
     };
@@ -28,10 +31,8 @@ function Contact() {
                 backgroundImage: `url('./assets/contactUs.jpg')`,
             }}
         >
-            {/* Overlay for opacity effect */}
             <div className="absolute inset-0 bg-black opacity-50"></div>
 
-            {/* Form Container */}
             <div className="relative z-10 w-full max-w-lg p-8 bg-white rounded-lg shadow-lg">
                 <h3 className="text-4xl font-bold text-center text-yellow-500 mb-6">Contact Us</h3>
                 <form ref={form} onSubmit={sendEmail} className="space-y-6">
