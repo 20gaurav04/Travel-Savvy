@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./assets/a.jpg"; // Make sure this path is correct
+import logo from "./assets/a.jpg";
 
 const AboutSection = () => {
   return (

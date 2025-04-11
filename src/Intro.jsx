@@ -1,24 +1,11 @@
-import React, { useEffect } from 'react';
-import { Carousel } from 'flowbite-react';
-import gsap from 'gsap';
 
+import { Carousel } from 'flowbite-react';
 import image1 from './assets/hawamahal.jpg';
 import image2 from './assets/image2.jpg';
 import image3 from './assets/image3.jpg';
 import image4 from './assets/image4.jpg';
 
 const Intro = () => {
-  useEffect(() => {
-    // GSAP animation for the overlay text
-    gsap.from('.carousel-text', {
-      duration: 1.5,
-      opacity: 0,
-      y: -50,
-      ease: 'power3.out',
-      stagger: 0.5, // Stagger each text animation
-    });
-  }, []);
-
   return (
     <div className="mt-4 p-12">
       <div className="sm:h-64 xl:h-80 2xl:h-[550px]">

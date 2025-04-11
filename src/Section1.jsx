@@ -20,7 +20,7 @@ const Section1 = () => {
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold mt-8 m-2 px-4 py-2 bg-black  text-orange-500 rounded-sm transition duration-300 hover:scale-110 hover:text-yellow-400">
           TRAVEL SAVVY IS HERE!
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl text-gray-800 mb-8 px-4 py-2  font-extrabold  bg-white">
+        <p className="text-lg sm:text-xl md:text-2xl bg-white text-gray-800 mb-8 px-4 py-2  font-extrabold  bg-whites">
           Discover, Explore, and Experience
         </p>
       </section>

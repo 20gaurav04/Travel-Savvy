@@ -1,8 +1,5 @@
 import React from 'react';
 import banner2 from './assets/banner2.png';
-import airTransport from './assets/air.jpg';
-import railTransport from './assets/rail.jpg';
-import roadTransport from './assets/road.jpg';
 
 const Section3 = () => {
   return (

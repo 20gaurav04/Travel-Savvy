@@ -10,7 +10,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black h-20 flex justify-between items-center px-4 md:px-8 relative z-50">
+    <nav className="bg-black h-20 flex fixed top-0 left-0 w-full justify-between items-center px-4 md:px-8 z-50">
+
       {/* Logo */}
       <div className="text-yellow-500 text-2xl font-bold">TravelSavvy</div>
 
@@ -23,6 +24,18 @@ const Navbar = () => {
 
       {/* Menu Links */}
       <ul className={`flex flex-col md:flex-row md:space-x-8 items-center md:items-center absolute md:static top-20 left-0 w-full md:w-auto bg-black md:bg-transparent text-white md:text-white h-screen md:h-auto ${isOpen ? 'block' : 'hidden'} md:flex`}>
+      <li>
+          <Link
+            to="sign"
+            smooth={true}
+            duration={500}
+            className="text-white text-2xl font-bold hover:underline cursor-pointer"
+            onClick={() => setIsOpen(false)}
+          >
+            Sign Up
+          </Link>
+        </li>
+        
         <li>
           <Link
             to="home"
